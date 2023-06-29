@@ -1,0 +1,27 @@
+Introduction: In the ever-evolving landscape of blockchain and smart contracts, new and innovative concepts continue to emerge. One such fascinating idea is the concept of self-fractalized contracts and time-based currencies. In this article, we will delve deep into the intricacies of self-fractalized contracts and their application in the context of two smart contracts: SelfFractalizedSCTS777 and SCTS777.
+
+Understanding Self-Fractalized SCTS777 Contracts: The SFTS777 is an implementation of the SCTS777 token standard, incorporating self-fractalization capabilities. Let’s explore the key components and functions of this contract:
+
+Constructor: The constructor function initializes the contract by setting the name, symbol, and total supply of the token. It also establishes storage mappings for balances, allowances, child tokens, and parent token information. The initial supply is allocated to the account that deploys the contract.
+Self-Fractalization Functions:
+a) create_child_token: This function facilitates the creation of child tokens within the self-fractalized contract. It generates a unique child token ID, constructs the child token’s contract name, and deploys a new instance of the SelfFractalizedSCTS777 contract as a sub-contract. The child token is initialized with the provided name, symbol, and total supply. The child token contract is serialized and deployed, and a deposit is transferred to cover the deployment costs. Finally, the child token is registered within the contract’s child_tokens mapping.
+
+b) set_parent_token: This function sets the parent token for self-fractalization. It ensures that no parent token is currently set and that the provided parent token is not a child token. If the conditions are met, the function removes the parent token from the balances mapping and updates the parent_token and parent_balance fields.
+
+c) remove_parent_token: This function removes the parent token from self-fractalization. It checks if a parent token is set, calculates the new parent balance based on the current parent token quantity, updates the balances mapping accordingly, and adjusts the total supply.
+
+d) get_child_tokens: This function retrieves the child tokens associated with a given parent token ID. It iterates over the child tokens and verifies if their parent token ID matches the input. The function returns the child token IDs as an optional vector.
+
+e) add_child_token: This function adds a child token to a parent token. It verifies the existence of the parent token, checks if the sender is the token owner, and ensures that the child token does not already exist. Upon successful validation, the function inserts the child token into the child owners mapping.
+
+Exploring SCTS777 Contracts and Grandchild Tokens: The SCTS777 contract represents a standard implementation of fungible tokens while introducing the concept of grandchild tokens. Let’s explore the features and functions of this contract:
+
+Constructor: Similar to the SelfFractalizedSCTS777 contract, the constructor initializes the SCTS777 contract by setting the name, symbol, and total supply of the token. It also establishes storage mappings for balances, allowances, and token-related information.
+Grandchild Token Functions:
+a) generate_grandchild_token: This function allows the generation of grandchild tokens. It requires a parent token ID and a recipient account as inputs. The function verifies the existence of the parent token, generates a unique grandchild token ID, and assigns the token to the recipient. The token’s balance is set to 1, and the token ownership and balances mappings are updated accordingly.
+
+b) transfer_grandchild_token: This function enables the transfer of grandchild tokens between accounts. It verifies the sender’s balance, updates the balances mapping for the sender and recipient, and adjusts the allowance mapping if applicable.
+
+c) burn_grandchild_token: This function allows the burning of grandchild tokens. It verifies the sender’s balance, reduces the token’s balance, and updates the balances mapping accordingly.
+
+Conclusion: The concepts of self-fractalization and time-based currencies introduced by Smiley’s Time-based DAEs push the boundaries of token functionality in the realm of smart contracts. By exploring the SelfFractalizedSCTS777 and SCTS777 contracts, we have gained insights into the intricate mechanics of deploying self-fractalized tokens and managing grandchild tokens. These concepts pave the way for new possibilities in decentralized finance and blockchain ecosystems.
