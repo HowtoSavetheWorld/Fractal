@@ -1,0 +1,30 @@
+For the SFTS777 contract:
+
+Implement additional standard functions based on requirements.
+Add events to notify listeners about token transfers, approvals, and other relevant actions.
+Implement a function to check the balance of a specific token holder.
+Implement a function to transfer tokens between accounts.
+Implement a function to approve a third-party spender to transfer tokens on behalf of the token holder.
+Implement a function to transfer tokens from one account to another on behalf of the token holder.
+Implement a function to allow a spender to transfer a specific amount of tokens on behalf of the token holder.
+Implement a function to create child tokens based on the existing token structure.
+Implement a function to set the parent token for a token, allowing it to be part of a hierarchical structure.
+Implement a function to remove the parent token association from a token.
+Implement a function to retrieve the child tokens of a parent token.
+For the SCTS777 contract with non-fungible and grandchild token support:
+
+Implement additional standard functions based on your requirements.
+Add events to notify listeners about token transfers, approvals, and other relevant actions.
+Implement a function to check the balance of a specific token holder.
+Implement a function to transfer tokens between accounts.
+Implement a function to approve a third-party spender to transfer tokens on behalf of the token holder.
+Implement a function to transfer tokens from one account to another on behalf of the token holder.
+Implement a function to allow a spender to transfer a specific amount of tokens on behalf of the token holder.
+Implement a function to generate grandchild tokens associated with a parent token and assign them to an account.
+Implement a function to transfer grandchild tokens between accounts.
+Implement a function to burn a specific grandchild token, removing it from the system.
+Implement a function to check the allowance of a specific grandchild token for a spender.
+
+Some already completed
+
+ALSO NEED TO ADD MORE COMMENTS AND DOCUMENTATION (refer to the Omnitoken Repo as well as Smiley's papers on this topic/area/field/niche)
